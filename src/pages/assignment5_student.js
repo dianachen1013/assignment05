@@ -5,7 +5,8 @@ import { Row, Col, Container } from "react-bootstrap";
 import { groupByAirline, groupByAirport } from "../components/assignment5/utils";
 import { AirportMap } from "../components/assignment5/airportMap";
 import { BarChart } from "../components/assignment5/barChart";
-import styles from '../components/assignment5/assignment5_styles.module.css'; // Import CSS module
+import styles from '../components/assignment5/assignment5_styles.module.css';
+
 
 const csvUrl = 'https://gist.githubusercontent.com/hogwild/9367e694e12bd2616205e4b3e91285d5/raw/9b451dd6bcc148c3553f550c92096a1a58e1e1e5/airline-routes.csv';
 const mapUrl = 'https://gist.githubusercontent.com/hogwild/26558c07f9e4e89306f864412fbdba1d/raw/5458902712c01c79f36dc28db33e345ee71487eb/countries.geo.json';
@@ -35,6 +36,7 @@ function useMap(jsonPath) {
     }, [jsonPath]);
     return data;
 }
+
 
 function AirlineRoutes() {
     const [selectedAirline, setSelectedAirline] = React.useState(null);
